@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/photo"
-        android:layout_width="165dp"
-        android:layout_height="177dp"
+        android:layout_width="318dp"
+        android:layout_height="260dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -18,16 +18,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/depic" />
 
-    <EditText
-        android:id="@+id/phone"
-        android:layout_width="409dp"
-        android:layout_height="341dp"
-        android:layout_marginBottom="96dp"
-        android:ems="10"
-        android:gravity="start"
-        android:hint="识别结果"
-        android:inputType="phone"
-        android:maxLength="11"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="412dp"
+        android:layout_height="314dp"
+        android:layout_marginBottom="109dp"
+        android:text=" 识别结果："
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
