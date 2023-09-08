@@ -67,11 +67,9 @@ public class VoiceActivity extends AppCompatActivity {
                 public void onResult(RecognizerResult recognizerResult, boolean isLast) {
                     if (!isLast) {
                         //解析语音
-                        //返回的result为识别后的汉字,直接赋值到TextView上即可
                         String result = parseVoice(recognizerResult.getResultString());
                         // Toast.makeText(context, result, Toast.LENGTH_SHORT).show();
                         txtdisplay.setText(result);
-                        //识别成功在textView显示
                     }
                 }
 

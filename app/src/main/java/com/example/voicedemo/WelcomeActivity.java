@@ -88,7 +88,7 @@ public class WelcomeActivity extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( WelcomeActivity.this, PhotoActivity.class );
+                Intent intent = new Intent( WelcomeActivity.this, MainActivity.class );
                 startActivity(intent);
             }
         });

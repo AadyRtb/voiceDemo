@@ -11,10 +11,21 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 外存储写权限，构建语法需要用到此权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 外存储读权限，构建语法需要用到此权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- &lt;!&ndash;手机定位信息，用来为语义等功能提供定位，提供更精准的服务&ndash;&gt; -->
-    <!-- &lt;!&ndash;定位信息是敏感信息，可通过Setting.setLocationEnable(false)关闭定位请求 &ndash;&gt; -->
-    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> -->
-    <!-- 如需使用人脸识别，还要添加：摄相头权限，拍照需要用到 -->
+    <uses-feature android:name="android.hardware.camera2" android:required="true" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -49,8 +60,21 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:parentActivityName=".WelcomeActivity" />
+            android:exported="false"
+            android:parentActivityName=".WelcomeActivity"/>
+
+
+        <activity android:name="com.example.voicedemo.Albums"></activity>
+        <activity android:name="com.example.voicedemo.Camera"></activity>
+<!--        <provider-->
+<!--            android:name="androidx.core.content.FileProvider"-->
+<!--            android:authorities="com.example.voicedemo.fileProvider"-->
+<!--            android:exported="true"-->
+<!--            android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/file_paths" />-->
+<!--        </provider>-->
     </application>
 
 </manifest>
